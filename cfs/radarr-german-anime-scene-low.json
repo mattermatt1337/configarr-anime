@@ -1,0 +1,20 @@
+{
+  "trash_id": "radarr-german-anime-scene-low",
+  "trash_scores": {
+    "default": 1600
+  },
+  "trash_description": "German Anime Scene STARS Low",
+  "name": "German Anime Scene STARS Low",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "STARS",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(STARS)$"
+      }
+    }
+  ]
+}
