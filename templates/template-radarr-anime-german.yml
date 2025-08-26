@@ -34,14 +34,12 @@ custom_formats:
       - anime-gersub
       #- german-dubbed-dl # counteract "Dubs Only"
       - lang-not-eng-ger
-      #- lang-not-jpn
       - radarr-german-anime-bluray-tier-01
       - radarr-german-anime-bluray-tier-02
       - radarr-german-anime-web-tier-01
       - radarr-german-anime-web-tier-02
       - radarr-german-anime-scene-low
       - radarr-german-anime-scene-high
-      #- sonarr-german-anime-web-custom
 
       # German Audio
       - 86bc3115eb4e9873ac96904a4a68e19e # German
