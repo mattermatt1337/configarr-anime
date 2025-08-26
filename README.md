@@ -1,1 +1,0 @@
-# configarr-anime
