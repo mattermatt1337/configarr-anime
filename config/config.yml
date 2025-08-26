@@ -1,0 +1,94 @@
+trashGuideUrl: https://github.com/TRaSH-Guides/Guides
+#trashRevision: master # Optional to specify sha
+recyclarrConfigUrl: https://github.com/recyclarr/config-templates
+#recyclarrRevision: master # Optional to specify sha
+
+localCustomFormatsPath: /app/cfs
+localConfigTemplatesPath: /app/templates
+radarr:
+  anime:
+    # Set the URL/API Key to your actual instance
+    base_url: http://URL:PORT
+    api_key: !secret RADARR_ANIME_API_KEY
+
+    include:
+      - template: template-radarr-anime-german
+      # Uncomment the following two lines to add the following TRaSH-Guides profile
+      #- template: 2b90e905c99490edc7c7a5787443748b # [German] HD Bluray + WEB
+      #  source: TRASH
+
+    custom_formats:
+      # If you want to favor English/Japanese Dual Audio uncomment one of the following two score lines
+      - trash_ids:
+          - 4a3b087eea2ce012fcc1ce319259a3be # Dual Audio
+        assign_scores_to:
+          - name: Anime HD
+            #score: 10
+            #score: 101
+
+      # If you want to favor Uncensored uncomment one of the following two score lines
+      - trash_ids:
+          - 064af5f084a0a24458cc8ecd3220f93f # Uncensored
+        assign_scores_to:
+          - name: Anime HD
+            score: 10
+            #score: 101
+
+      # If you want to favor 10bit uncomment on of them the following two score lines
+      - trash_ids:
+          - a5d148168c4506b55cf53984107c396e # 10bit
+        assign_scores_to:
+          - name: Anime HD
+            #score: 10
+            #score: 101
+
+      # If you want to allow German Microsized groups (e.g. FuN) uncomment the following 5 lines
+      - trash_ids:
+          - 03c430f326f10a27a9739b8bc83c30e4 # German Microsized
+        assign_scores_to:
+          - name: Anime HD
+            score: 0
+
+sonarr:
+  anime:
+    # Set the URL/API Key to your actual instance
+    base_url: http://URL:PORT
+    api_key: !secret SONARR_ANIME_API_KEY
+
+    include:
+      - template: template-sonarr-anime-german
+      # Uncomment the following two lines to add the following TRaSH-Guides profile
+      #- template: dca7e5e9e99c703bcbdaaa471dd40e98 # [German] HD Bluray + WEB
+      #  source: TRASH
+
+    custom_formats:
+      # Prefer English/Japanese Dual Audio
+      - trash_ids:
+          - 418f50b10f1907201b6cfdf881f467b7 # Dual Audio
+        assign_scores_to:
+          - name: Anime HD
+            #score: 10
+            #score: 101
+
+      # If you want to favor Uncensored uncomment one of the following two score lines
+      - trash_ids:
+          - 026d5aadd1a6b4e550b134cb6c72b3ca # Uncensored
+        assign_scores_to:
+          - name: Anime HD
+            score: 10
+            #score: 101
+
+      # If you want to favor 10bit uncomment on of them the following two score lines
+      - trash_ids:
+          - b2550eb333d27b75833e25b8c2557b38 # 10bit
+        assign_scores_to:
+          - name: Anime HD
+            #score: 10
+            #score: 101
+
+      # If you want to allow German Microsized groups (e.g. FuN) uncomment the following 5 lines
+      - trash_ids:
+          - 237eda4ef550a97da2c9d87b437e500b # German Microsized
+        assign_scores_to:
+          - name: Anime HD
+            score: 0
