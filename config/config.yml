@@ -8,8 +8,10 @@ localConfigTemplatesPath: /app/templates
 radarr:
   anime:
     # Set the URL/API Key to your actual instance
-    base_url: http://URL:PORT
+    base_url: !secret RADARR_ANIME_URL
     api_key: !secret RADARR_ANIME_API_KEY
+    delete_unmanaged_custom_formats:
+        enabled: true
 
     include:
       - template: template-radarr-anime-german
@@ -52,8 +54,10 @@ radarr:
 sonarr:
   anime:
     # Set the URL/API Key to your actual instance
-    base_url: http://URL:PORT
+    base_url: !secret SONARR_ANIME_URL
     api_key: !secret SONARR_ANIME_API_KEY
+    delete_unmanaged_custom_formats:
+        enabled: true
 
     include:
       - template: template-sonarr-anime-german
