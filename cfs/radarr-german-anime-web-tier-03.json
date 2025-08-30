@@ -1,0 +1,20 @@
+{
+  "trash_id": "radarr-german-anime-web-tier-03",
+  "trash_scores": {
+    "default": 1600
+  },
+  "trash_description": "German Anime Web Tier 03 Groups",
+  "name": "German Anime Web Tier 03",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "STARS",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(STARS)$"
+      }
+    }
+  ]
+}
