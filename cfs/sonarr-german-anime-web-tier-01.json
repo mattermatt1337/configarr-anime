@@ -13,7 +13,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\bAinz\\b"
+        "value": "^(Ainz)$"
       }
     },
     {
@@ -58,7 +58,16 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\bHiSHiRO\\b"
+        "value": "^(HiSHiRO)$"
+      }
+    },
+    {
+      "name": "ONiGiRi",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(ONiGiRi)$"
       }
     },
     {
