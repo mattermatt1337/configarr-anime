@@ -38,8 +38,7 @@ custom_formats:
       - radarr-german-anime-bluray-tier-02
       - radarr-german-anime-web-tier-01
       - radarr-german-anime-web-tier-02
-      - radarr-german-anime-scene-low
-      - radarr-german-anime-scene-high
+      - radarr-german-anime-web-tier-03
 
       # German Audio
       - 86bc3115eb4e9873ac96904a4a68e19e # German
