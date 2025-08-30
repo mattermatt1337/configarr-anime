@@ -13,7 +13,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\bAinz\\b"
+        "value": "^(Ainz)$"
       }
     },
     {
@@ -49,7 +49,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\bHiSHiRO\\b"
+        "value": "^(HiSHiRO)$"
       }
     },
     {
