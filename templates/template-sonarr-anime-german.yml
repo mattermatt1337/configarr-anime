@@ -38,8 +38,7 @@ custom_formats:
       - sonarr-german-anime-bluray-tier-02
       - sonarr-german-anime-web-tier-01
       - sonarr-german-anime-web-tier-02
-      - radarr-german-anime-scene-low
-      - radarr-german-anime-scene-high
+      - radarr-german-anime-web-tier-03
 
       # German Audio
       - 8a9fcdbb445f2add0505926df3bb7b8a # German
