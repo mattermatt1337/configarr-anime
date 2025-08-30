@@ -33,7 +33,8 @@ custom_formats:
   - trash_ids:
       - anime-gersub
       #- german-dubbed-dl # counteract "Dubs Only"
-      - lang-not-eng-ger
+      - lang-not-eng-ger # no japanese content, only german and/or english
+      #- lang-not-eng-ger-jpn # german, english and/or japanese content
       - radarr-german-anime-bluray-tier-01
       - radarr-german-anime-bluray-tier-02
       - radarr-german-anime-web-tier-01
