@@ -33,11 +33,12 @@ custom_formats:
   - trash_ids:
       - anime-gersub
       #- german-dubbed-dl # counteract "Dubs Only"
-      - lang-not-eng-ger
-      - sonarr-german-anime-bluray-tier-01
-      - sonarr-german-anime-bluray-tier-02
-      - sonarr-german-anime-web-tier-01
-      - sonarr-german-anime-web-tier-02
+      - lang-not-eng-ger # no japanese content, only german and/or english
+      #- lang-not-eng-ger-jpn # german, english and/or japanese content
+      - radarr-german-anime-bluray-tier-01
+      - radarr-german-anime-bluray-tier-02
+      - radarr-german-anime-web-tier-01
+      - radarr-german-anime-web-tier-02
       - radarr-german-anime-web-tier-03
 
       # German Audio
