@@ -1,0 +1,19 @@
+{
+  "trash_id": "lang-only-jap",
+  "trash_scores": {
+    "default": 35000
+  },
+  "trash_description": "Language: Japanese",
+  "name": "Language: JPN",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "Japanese Language",
+      "implementation": "LanguageSpecification",
+      "required": true,
+      "fields": {
+        "value": 8
+      }
+    }
+  ]
+}
