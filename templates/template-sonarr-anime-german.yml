@@ -29,22 +29,60 @@ quality_profiles:
           - SDTV
           - Unknown
 
+  - name: Anime HD - Jap Only
+    reset_unmatched_scores:
+      enabled: true
+    score_set: any
+    upgrade:
+      allowed: true
+      until_quality: Merged QPs
+      until_score: 35000
+    min_format_score: 35000
+    quality_sort: top
+    qualities:
+      - name: Merged QPs
+        qualities:
+          - Bluray-1080p Remux
+          - Bluray-1080p
+          - WEBDL-1080p
+          - WEBRip-1080p
+          - HDTV-1080p
+          - Bluray-720p
+          - WEBRip-720p
+          - WEBDL-720p
+          - HDTV-720p
+          - Bluray-576p
+          - Bluray-480p
+          - WEBRip-480p
+          - WEBDL-480p
+          - DVD
+          - SDTV
+          - Unknown
+
 custom_formats:
   - trash_ids:
       - anime-gersub
       #- german-dubbed-dl # counteract "Dubs Only"
-      - lang-not-eng-ger # no japanese content, only german and/or english
-      #- lang-not-eng-ger-jpn # german, english and/or japanese content
-      - radarr-german-anime-bluray-tier-01
-      - radarr-german-anime-bluray-tier-02
-      - radarr-german-anime-web-tier-01
-      - radarr-german-anime-web-tier-02
-      - radarr-german-anime-web-tier-03
-
-      # German Audio
+      - lang-not-eng-ger
+      #- lang-not-jpn
       - 8a9fcdbb445f2add0505926df3bb7b8a # German
       - ed51973a811f51985f14e2f6f290e47a # German DL
       - c5dd0fd675f85487ad5bdf97159180bd # German DL (undefined)
+    assign_scores_to:
+      - name: Anime HD
+
+  - trash_ids:
+      - anime-gersub
+      - lang-only-jap
+    assign_scores_to:
+      - name: Anime HD - Jap Only
+
+  - trash_ids:
+      - sonarr-german-anime-bluray-tier-01
+      - sonarr-german-anime-bluray-tier-02
+      - sonarr-german-anime-web-tier-01
+      - sonarr-german-anime-web-tier-02
+      - radarr-german-anime-web-tier-03
 
       # German Unwanted
       - a6a6c33d057406aaad978a6902823c35 # German LQ
