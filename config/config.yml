@@ -71,8 +71,9 @@ sonarr:
           - 418f50b10f1907201b6cfdf881f467b7 # Dual Audio
         assign_scores_to:
           - name: Anime HD
+            score: 10
           - name: Anime HD - Jap Only
-            #score: 10
+            score: 10
             #score: 101
 
       # If you want to favor Uncensored uncomment one of the following two score lines
@@ -80,6 +81,7 @@ sonarr:
           - 026d5aadd1a6b4e550b134cb6c72b3ca # Uncensored
         assign_scores_to:
           - name: Anime HD
+            score: 101
           - name: Anime HD - Jap Only
             #score: 10
             score: 101
@@ -98,5 +100,6 @@ sonarr:
           - 237eda4ef550a97da2c9d87b437e500b # German Microsized
         assign_scores_to:
           - name: Anime HD
+            score: 0
           - name: Anime HD - Jap Only
             score: 0
