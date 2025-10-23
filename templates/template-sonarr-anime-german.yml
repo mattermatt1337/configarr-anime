@@ -80,6 +80,7 @@ custom_formats:
   - trash_ids:
       - sonarr-german-anime-bluray-tier-01
       - sonarr-german-anime-bluray-tier-02
+      - radarr-german-anime-bluray-tier-03
       - sonarr-german-anime-web-tier-01
       - sonarr-german-anime-web-tier-02
       - radarr-german-anime-web-tier-03
