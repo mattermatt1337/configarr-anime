@@ -1,0 +1,56 @@
+{
+  "trash_id": "radarr-german-anime-bluray-tier-03",
+  "trash_scores": {
+    "default": 1650
+  },
+  "trash_description": "German Anime Bluray Tier 03 Groups",
+  "name": "German Anime Bluray Tier 03",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "STARS",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(STARS)$"
+      }
+    },
+    {
+      "name": "Hugo",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(Hugo)$"
+      }
+    },
+    {
+      "name": "AO",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(AO)$"
+      }
+    },
+    {
+      "name": "Bluray",
+      "implementation": "SourceSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": 9
+      }
+    },
+    {
+      "name": "Not REMUX",
+      "implementation": "SourceSpecification",
+      "negate": true,
+      "required": true,
+      "fields": {
+        "value": 5
+      }
+    }
+  ]
+}
