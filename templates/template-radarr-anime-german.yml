@@ -37,6 +37,7 @@ custom_formats:
       #- lang-not-eng-ger-jpn # german, english and/or japanese content
       - radarr-german-anime-bluray-tier-01
       - radarr-german-anime-bluray-tier-02
+      - radarr-german-anime-bluray-tier-03
       - radarr-german-anime-web-tier-01
       - radarr-german-anime-web-tier-02
       - radarr-german-anime-web-tier-03
