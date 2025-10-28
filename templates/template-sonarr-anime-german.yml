@@ -80,10 +80,11 @@ custom_formats:
   - trash_ids:
       - sonarr-german-anime-bluray-tier-01
       - sonarr-german-anime-bluray-tier-02
-      - radarr-german-anime-bluray-tier-03
+      - sonarr-german-anime-bluray-tier-03
       - sonarr-german-anime-web-tier-01
       - sonarr-german-anime-web-tier-02
-      - radarr-german-anime-web-tier-03
+      - sonarr-german-anime-web-tier-03
+      - sonarr-german-anime-dvd-tier-01
 
       # German Unwanted
       - a6a6c33d057406aaad978a6902823c35 # German LQ
