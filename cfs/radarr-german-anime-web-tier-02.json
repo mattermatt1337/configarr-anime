@@ -1,5 +1,5 @@
 {
-  "trash_id": "sonarr-german-anime-web-tier-02",
+  "trash_id": "radarr-german-anime-web-tier-02",
   "trash_scores": {
     "default": 1900
   },
@@ -76,7 +76,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": 3
+        "value": 7
       }
     },
     {
@@ -85,7 +85,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": 4
+        "value": 8
       }
     }
   ]
