@@ -35,15 +35,6 @@
       }
     },
     {
-      "name": "ONiGiRi",
-      "implementation": "ReleaseGroupSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": "^(ONiGiRi)$"
-      }
-    },
-    {
       "name": "snk",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
