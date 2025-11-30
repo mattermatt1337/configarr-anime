@@ -36,7 +36,7 @@
     },
     {
       "name": "Cytox",
-      "implementation": "ReleaseTitleSpecification",
+      "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
