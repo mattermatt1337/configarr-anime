@@ -1,0 +1,19 @@
+{
+  "trash_id": "dvd",
+  "trash_scores": {
+    "default": 25
+  },
+  "name": "DVD Quality",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "DVD Source",
+      "implementation": "SourceSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": 5
+      }
+    }
+  ]
+}
