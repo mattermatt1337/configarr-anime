@@ -1,4 +1,4 @@
-trashGuideUrl: https://github.com/TRaSH-Guides/Guides
+trashGuideUrl: https://github.com/LaurenceBarnes/Guides
 #trashRevision: master # Optional to specify sha
 recyclarrConfigUrl: https://github.com/recyclarr/config-templates
 #recyclarrRevision: master # Optional to specify sha
@@ -11,44 +11,77 @@ radarr:
     base_url: !secret RADARR_ANIME_URL
     api_key: !secret RADARR_ANIME_API_KEY
     delete_unmanaged_custom_formats:
-        enabled: true
+      enabled: true
+    delete_unmanaged_quality_profiles:
+      enabled: true
 
     include:
+      - template: radarr-quality-definition-anime
       - template: template-radarr-anime-german
-      # Uncomment the following two lines to add the following TRaSH-Guides profile
-      #- template: 2b90e905c99490edc7c7a5787443748b # [German] HD Bluray + WEB
-      #  source: TRASH
+      - template: bf3cc2e99ad9a804a9b0d0e538e1fbba # [German] Anime HD Bluray + WEB
+        source: TRASH
+
+    renameQualityProfiles:
+      - from: "[German] Anime HD Bluray + WEB"
+        to: "[German] Anime"
+
+    cloneQualityProfiles:
+      - from: "[German] Anime"
+        to: "[Japanese] Anime"
+      - from: "[German] Anime"
+        to: "Any"
 
     custom_formats:
-      # If you want to favor English/Japanese Dual Audio uncomment one of the following two score lines
+      # Prefer English/Japanese Dual Audio over German Subs only
       - trash_ids:
-          - 4a3b087eea2ce012fcc1ce319259a3be # Dual Audio
+          - 4a3b087eea2ce012fcc1ce319259a3be # Anime Dual Audio
         assign_scores_to:
-          - name: Anime HD
-            #score: 10
-            #score: 101
+          - name: "[German] Anime"
+            score: 101
+          - name: "[Japanese] Anime"
+            score: 101
 
-      # If you want to favor Uncensored uncomment one of the following two score lines
       - trash_ids:
           - 064af5f084a0a24458cc8ecd3220f93f # Uncensored
         assign_scores_to:
-          - name: Anime HD
-            score: 10
-            #score: 101
+          - name: "[German] Anime"
+            score: 101
+          - name: "[Japanese] Anime"
+            score: 101
 
-      # If you want to favor 10bit uncomment on of them the following two score lines
       - trash_ids:
           - a5d148168c4506b55cf53984107c396e # 10bit
         assign_scores_to:
-          - name: Anime HD
-            #score: 10
-            #score: 101
+          - name: "[German] Anime"
+            score: 101
+          - name: "[Japanese] Anime"
+            score: 101
 
-      # If you want to allow German Microsized groups (e.g. FuN) uncomment the following 5 lines
+      - trash_ids:
+          - lang-only-jap
+        assign_scores_to:
+          - name: "[Japanese] Anime"
+
+      # Reset all negative scores to 0 so that everything can be grabbed
       - trash_ids:
           - 03c430f326f10a27a9739b8bc83c30e4 # German Microsized
+          - b0fdc5897f68c9a68c70c25169f77447 # Anime LQ Groups
+          - 06b6542a47037d1e33b15aa3677c2365 # Anime Raws
+          - cae4ca30163749b891686f95532519bd # AV1
+          - ed38b889b31be83fda192888e2286d83 # BR-DISK
+          - 0a3f082873eb454bde444150b70253cc # Extras
+          - a826ee9e46607bc61795c85a6f2b1279 # German LQ (release title)
+          - 263943bc5d99550c68aad0c4278ba1c7 # German LQ
+          - 90a6f9a284dff5103f6346090e6280c8 # LQ
+          - e204b80c87be9497a8a6eaff48f72905 # LQ (Release Title)
+          - 532c4a41c94ae0f77c745ae478883c44 # Not German, Japanese or English
+          - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
+          - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
+          - c259005cbaeb5ab44c06eddb4751e70c # v0
+          - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
+          - c465ccc73923871b3eb1802042331306 # Line/Mic Dubbed
         assign_scores_to:
-          - name: Anime HD
+          - name: Any
             score: 0
 
 sonarr:
@@ -57,49 +90,73 @@ sonarr:
     base_url: !secret SONARR_ANIME_URL
     api_key: !secret SONARR_ANIME_API_KEY
     delete_unmanaged_custom_formats:
-        enabled: true
+      enabled: true
+    delete_unmanaged_quality_profiles:
+      enabled: true
 
     include:
+      - template: sonarr-quality-definition-anime
       - template: template-sonarr-anime-german
-      # Uncomment the following two lines to add the following TRaSH-Guides profile
-      #- template: dca7e5e9e99c703bcbdaaa471dd40e98 # [German] HD Bluray + WEB
-      #  source: TRASH
+      - template: 6fe5937e1dcc2269e23b49eb46dfe6d6 # [German] Anime HD Bluray + WEB
+        source: TRASH
+
+    renameQualityProfiles:
+      - from: "[German] Anime HD Bluray + WEB"
+        to: "[German] Anime"
+
+    cloneQualityProfiles:
+      - from: "[German] Anime"
+        to: "[Japanese] Anime"
+      - from: "[German] Anime"
+        to: "Any"
 
     custom_formats:
-      # Prefer English/Japanese Dual Audio
+      # Prefer English/Japanese Dual Audio over German Subs only
       - trash_ids:
-          - 418f50b10f1907201b6cfdf881f467b7 # Dual Audio
+          - 418f50b10f1907201b6cfdf881f467b7 # Anime Dual Audio
         assign_scores_to:
-          - name: Anime HD
-            score: 10
-          - name: Anime HD - Jap Only
-            score: 10
-            #score: 101
+          - name: "[German] Anime"
+            score: 101
+          - name: "[Japanese] Anime"
+            score: 101
 
-      # If you want to favor Uncensored uncomment one of the following two score lines
       - trash_ids:
           - 026d5aadd1a6b4e550b134cb6c72b3ca # Uncensored
         assign_scores_to:
-          - name: Anime HD
+          - name: "[German] Anime"
             score: 101
-          - name: Anime HD - Jap Only
-            #score: 10
+          - name: "[Japanese] Anime"
             score: 101
 
-      # If you want to favor 10bit uncomment on of them the following two score lines
       - trash_ids:
           - b2550eb333d27b75833e25b8c2557b38 # 10bit
         assign_scores_to:
-          - name: Anime HD
-          - name: Anime HD - Jap Only
-            #score: 10
-            #score: 101
+          - name: "[German] Anime"
+            score: 101
+          - name: "[Japanese] Anime"
+            score: 101
 
-      # If you want to allow German Microsized groups (e.g. FuN) uncomment the following 5 lines
+      - trash_ids:
+          - lang-only-jap
+        assign_scores_to:
+          - name: "[Japanese] Anime"
+
+      # Reset all negative scores to 0 so that everything can be grabbed
       - trash_ids:
           - 237eda4ef550a97da2c9d87b437e500b # German Microsized
+          - e3515e519f3b1360cbfc17651944354c # Anime LQ Groups
+          - b4a1b3d705159cdca36d71e57ca86871 # Anime Raws
+          - 15a05bc7c1a36e2b57fd628f8977e2fc # AV1
+          - 85c61753df5da1fb2aab6f2a47426b09 # BR-DISK
+          - fbcb31d8dabd2a319072b84fc0b7249c # Extras
+          - d80c9f7cd2aad50271f1bd4e53125778 # German LQ (release title)
+          - a6a6c33d057406aaad978a6902823c35 # German LQ
+          - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
+          - e2315f990da2e2cbfc9fa5b7a6fcfe48 # LQ (Release Title)
+          - 51ba9721e1d951e9ffccb3d939831941 # Not German, Japanese or English
+          - 23297a736ca77c0fc8e70f8edd7ee56c # Upscaled
+          - 07a32f77690263bb9fda1842db7e273f # VOSTFR
+          - d2d7b8a9d39413da5f44054080e028a3 # v0
         assign_scores_to:
-          - name: Anime HD
-            score: 0
-          - name: Anime HD - Jap Only
+          - name: Any
             score: 0
